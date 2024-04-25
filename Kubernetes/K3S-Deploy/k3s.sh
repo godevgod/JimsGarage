@@ -27,11 +27,11 @@ KVVERSION="v0.6.3"
 k3sVersion="v1.26.10+k3s2"
 
 # Set the IP addresses of the master and work nodes
-master1=10.1.140.100
-master2=10.1.140.101
-master3=10.1.140.102
-worker1=10.1.140.103
-worker2=10.1.140.104
+master1=10.1.140.227
+master2=10.1.140.217
+master3=10.1.140.216
+worker1=10.1.140.215
+worker2=10.1.140.214
 
 # User of remote machines
 user=ubuntu
