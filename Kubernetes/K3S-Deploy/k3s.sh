@@ -27,11 +27,11 @@ KVVERSION="v0.6.3"
 k3sVersion="v1.26.10+k3s2"
 
 # Set the IP addresses of the master and work nodes
-master1=192.168.3.21
-master2=192.168.3.22
-master3=192.168.3.23
-worker1=192.168.3.24
-worker2=192.168.3.25
+master1=10.1.140.100
+master2=10.1.140.101
+master3=10.1.140.102
+worker1=10.1.140.103
+worker2=10.1.140.104
 
 # User of remote machines
 user=ubuntu
@@ -40,7 +40,7 @@ user=ubuntu
 interface=eth0
 
 # Set the virtual IP address (VIP)
-vip=192.168.3.50
+vip=10.1.140.50
 
 # Array of master nodes
 masters=($master2 $master3)
@@ -55,8 +55,9 @@ all=($master1 $master2 $master3 $worker1 $worker2)
 allnomaster1=($master2 $master3 $worker1 $worker2)
 
 #Loadbalancer IP range
-lbrange=192.168.3.60-192.168.3.80
-
+#lbrange=192.168.3.60-192.168.3.80
+lbrange=10.1.140.110-10.1.140.130
+#[this want to be expose]
 #ssh certificate name variable
 certName=id_rsa
 
@@ -129,7 +130,7 @@ echo -e " \033[32;5mFirst Node bootstrapped successfully!\033[0m"
 kubectl apply -f https://kube-vip.io/manifests/rbac.yaml
 
 # Step 3: Download kube-vip
-curl -sO https://raw.githubusercontent.com/JamesTurland/JimsGarage/main/Kubernetes/K3S-Deploy/kube-vip
+curl -sO https://raw.githubusercontent.com/godevgod/JimsGarage/main/Kubernetes/K3S-Deploy/kube-vip
 cat kube-vip | sed 's/$interface/'$interface'/g; s/$vip/'$vip'/g' > $HOME/kube-vip.yaml
 
 # Step 4: Copy kube-vip.yaml to master1
