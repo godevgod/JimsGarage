@@ -21,17 +21,17 @@ echo -e " \033[32;5m                                                           \
 #############################################
 
 # Version of Kube-VIP to deploy
-KVVERSION="v0.6.3"
+KVVERSION="v0.8.0"
 
 # K3S Version
-k3sVersion="v1.26.10+k3s2"
+k3sVersion="v1.29.3+k3s1"
 
 # Set the IP addresses of the master and work nodes
-master1=10.1.140.227
-master2=10.1.140.217
-master3=10.1.140.216
-worker1=10.1.140.215
-worker2=10.1.140.214
+master1=10.1.140.4
+master2=10.1.140.5
+master3=10.1.140.6
+worker1=10.1.140.7
+worker2=10.1.140.8
 
 # User of remote machines
 user=ubuntu
