@@ -56,7 +56,7 @@ allnomaster1=($master2 $master3 $worker1 $worker2)
 
 #Loadbalancer IP range
 #lbrange=192.168.3.60-192.168.3.80
-lbrange=10.1.140.110-10.1.140.130
+lbrange=10.1.140.60-10.1.140.80
 #[this want to be expose]
 #ssh certificate name variable
 certName=id_rsa
