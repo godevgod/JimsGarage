@@ -24,14 +24,16 @@ echo -e " \033[32;5m                                                           \
 KVVERSION="v0.8.0"
 
 # K3S Version
-k3sVersion="v1.29.3+k3s1"
+#k3sVersion="v1.29.3+k3s1"
+#k3sVersion="v1.27.10+k3s2"
+k3sVersion="v1.26.10+k3s2"
 
 # Set the IP addresses of the master and work nodes
-master1=10.1.140.4
-master2=10.1.140.5
-master3=10.1.140.6
-worker1=10.1.140.7
-worker2=10.1.140.8
+master1=10.1.140.13
+master2=10.1.140.14
+master3=10.1.140.15
+worker1=10.1.140.16
+worker2=10.1.140.17
 
 # User of remote machines
 user=ubuntu
